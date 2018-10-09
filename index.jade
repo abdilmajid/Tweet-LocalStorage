@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Save Tweets Into Storage
+    link(rel='stylesheet', href='assets/css/normalize.css')
+    link(rel='stylesheet', href='assets/css/skeleton.css')
+    link(rel='stylesheet', href='assets/css/custom.css')
+  body
+    #content
+      .container
+        h1 Local Storage
+        .row
+          .six.columns
+            label(for='tweet') Tweet:
+            form#form(action='#')
+              label(for='tweet')
+              textarea#tweet.u-full-width(placeholder='Write Tweet')
+              input.button.u-full-width.button-primary(type='submit', value='Save Tweet')
+          .six.columns
+            h2 My Tweets
+            #tweet-list
+    script(src='assets/js/app.js')
