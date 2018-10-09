@@ -111,7 +111,16 @@ function removeTweetLS(tweet) {
 
   // Remove X from Tweets
   const tweetDelete = tweet.substring(0, tweet.length - 1);
-  console.log(tweetDelete);
+  
+  // Loop Through Tweets & remove tweets
+  tweets.forEach(function(tweetLS, index){
+    if(tweetDelete === tweetLS) {
+      tweets.splice(index, 1);
+    }
+  });
+
+  // Saved the Data
+  localStorage.setItem(`tweets`, JSON.stringify(tweets));
 }
 
 
